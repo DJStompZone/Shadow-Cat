@@ -12,7 +12,7 @@ This project is a Python-based replacement for the traditional `netcat` tool. It
 ## Usage
 
 ```bash
-python netcat.py -t target_host -p port [options]
+python shadow-cat.py -t target_host -p port [options]
 ```
 
 ## Options
@@ -26,25 +26,25 @@ Start a command shell on the target:
 
 Copy code
 ```bash
-python netcat.py -t 192.168.0.1 -p 5555 -l -c
+python shadow-cat.py -t 192.168.0.1 -p 5555 -l -c
 ```
 Upload a file to the target:
 
 Copy code
 ```bash
-python netcat.py -t 192.168.0.1 -p 5555 -l -u=c:\\target.exe
+python shadow-cat.py -t 192.168.0.1 -p 5555 -l -u=c:\\target.exe
 ```
 Execute a command on the target:
 
 Copy code
 ```bash
-python netcat.py -t 192.168.0.1 -p 5555 -l -e="cat /etc/passwd"
+python shadow-cat.py -t 192.168.0.1 -p 5555 -l -e="cat /etc/passwd"
 ```
 Send data to a remote server:
 
 Copy code
 ```bash
-echo 'Hello World' | python netcat.py -t 192.168.11.12 -p 135
+echo 'Hello World' | python shadow-cat.py -t 192.168.11.12 -p 135
 ```
 ## How It Works
 ### Client Mode:
