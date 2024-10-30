@@ -15,6 +15,22 @@ This project is a Python-based replacement for the traditional `netcat` tool. It
 python shadow-cat.py -t target_host -p port [options]
 ```
 
+## System Wide Install (Optional)
+### Installation
+You can add shadow-cat to a location on your `PATH` to make it available anywhere
+Note: You can `echo $PATH` to view your current `PATH` locations
+```bash
+# Feel free to change this to whatever/wherever you want
+BIN_FILE_NAME="shadcat"
+BIN_PATH="/usr/bin/${BIN_FILE_NAME}"
+
+sudo cp shadow-cat.py "$BIN_PATH"
+sudo chmod a+x "$BIN_PATH"
+```
+
+ ### Usage
+ Then, you can execute from anywhere by invoking `shadcat`
+
 ## Options
 - -h, --help : Show the help message and usage information.
 - -l, --listen : Listen on [host]:[port] for incoming connections.
